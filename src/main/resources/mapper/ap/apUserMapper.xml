@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ufgov.data.transport.datatransport.Mapper.APUserMapper">
+    <resultMap id="aPUser" type="com.ufgov.data.transport.datatransport.entity.APUser">
+        <result property="userId" column="USER_ID"/>
+        <result property="userCode" column="USER_CODE"/>
+        <result property="userName" column="USER_NAME"/>
+        <result property="password" column="PASSWORD"/>
+        <result property="createDate" column="CREATE_DATE"/>
+    </resultMap>
+
+    <select id="getAPUserById" resultMap="aPUser" parameterType="java.lang.String">
+  select user_id,user_code,user_name,password,create_date from ap_user where user_id = #{userId}
+ </select>
+
+</mapper>

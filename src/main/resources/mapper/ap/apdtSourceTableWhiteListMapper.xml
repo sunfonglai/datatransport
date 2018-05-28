@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ufgov.data.transport.datatransport.Mapper.APDTSourceTableWhiteListMapper">
+
+
+    <select id="getTableNamesBySourceId" resultType="java.util.Map" parameterType="java.lang.String">
+ select table_name from dt_source_table_white_list t where t.source_id = ${sourceId}
+ </select>
+
+</mapper>
